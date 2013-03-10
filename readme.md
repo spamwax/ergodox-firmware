@@ -1,10 +1,8 @@
 # [ergodox-firmware][]: Firmware for the [ErgoDox keyboard][]
 
-The official website is [ergodox.org] (http://www.ergodox.org).  
-Also see the [geekhack]
-(http://geekhack.org/showthread.php?22780-Interest-Check-Custom-split-ergo-keyboard)
-and [deskthority]
-(http://deskthority.net/workshop-f7/split-ergonomic-keyboard-project-t1753.html)
+The official website is [ergodox.org](http://www.ergodox.org).
+Also see the [geekhack](http://geekhack.org/showthread.php?22780-Interest-Check-Custom-split-ergo-keyboard)
+and [deskthority](http://deskthority.net/workshop-f7/split-ergonomic-keyboard-project-t1753.html)
 discussion threads.
 
 
@@ -55,20 +53,17 @@ a bunch going on, and 'master' doesn't, and things sort of fall out of sync...
 but I'll try to avoid that.  See the other branches for what's going on there.
 
 Also, lots of other documentation can be found intermixed with the source
-(especially in the accompanying '.md' files), and [references.md]
-(references.md) contains lots of good links, along with descriptions.
+(especially in the accompanying '.md' files), and [references.md](references.md) contains lots of good links, along with descriptions.
 
 ### Downloading Binaries
-If you're just looking for binaries, they can be downloaded [here]
-[dropbox-download-page].
+If you're just looking for binaries, they can be downloaded [here][dropbox-download-page].
 
 ### Compiling
 If you're just trying to compile, jump to the How To: [Compile the Source Code]
 (#compile-the-source-code) section.
 
 ### Issues and Feature Requests
-Open issues, feature requests, and such are tracked [on github]
-(/benblazak/ergodox-firmware/issues).
+Open issues, feature requests, and such are tracked [on github](/benblazak/ergodox-firmware/issues).
 
 ### Features (on the ErgoDox)
 * 6KRO (conforms to the USB boot specification)
@@ -82,19 +77,19 @@ Open issues, feature requests, and such are tracked [on github]
 
 If you're looking to hack on the source, or just feel like reading it:
 
-* The [makefile] (./makefile) and [build-scripts] (./build-scripts) folder in
+* The [makefile](./makefile) and [build-scripts](./build-scripts) folder in
   the toplevel directory are for building a collection of files for easy
   distribution.  They are not guaranteed to work on non-Unix systems, and may
-  be (read: are) more hackish than the stuff in [src] (./src).  They help me
+  be (read: are) more hackish than the stuff in [src](./src).  They help me
   out though.
-* [src/lib] (src/lib) is for generally useful stuff relating to the firmware.
-  [src/lib-other] (src/lib-other) is for generally useful stuff that I didn't
+* [src/lib](src/lib) is for generally useful stuff relating to the firmware.
+  [src/lib-other](src/lib-other) is for generally useful stuff that I didn't
   write myself.  The TWI and USB libraries are in there, along with the files
   containing key press and release functions.
-* [src/keyboard] (src/keyboard) is for keyboard specific stuff.  All the chip
+* [src/keyboard](src/keyboard) is for keyboard specific stuff.  All the chip
   initialization code is there, along with the layout files, the software
   matrix to hardware matrix mapping, and hardware specific documentation.
-* [src/main.c] (src/main.c) ties it all together, and provides a few higher
+* [src/main.c](src/main.c) ties it all together, and provides a few higher
   level functions that are useful in the key press and release functions.
 
 
@@ -122,15 +117,14 @@ A few concepts that might be different:
 
 ## Dependencies (for building from source)
 
-* See the PJRC [Getting Started] (http://pjrc.com/teensy/first_use.html) page
+* See the PJRC [Getting Started](http://pjrc.com/teensy/first_use.html) page
   for instructions on how to set up an AVR programming environment (be sure to
   click through all the subsections (in the navigation bar on the left), as
   there is essential information in each one).  This project uses C (not
   Arduino), and Make.  I'm compiling with GNU tools under OS X, but other
-  environments (especially Linux, appropriately set up, or [WinAVR]
-  (http://winavr.sourceforge.net/) under Windows) should work too.
+  environments (especially Linux, appropriately set up, or [WinAVR](http://winavr.sourceforge.net/) under Windows) should work too.
 
-* I also assume that you are using [git] (http://git-scm.com/) (for `make
+* I also assume that you are using [git](http://git-scm.com/) (for `make
   clean`).
 
 
@@ -169,8 +163,7 @@ After getting set up:
       Teensy is ready for it.
 
 * Locate your '.eep' and '.hex' files.
-    * If you don't have any, you can grab the latest ones [here]
-      [dropbox-download-page] (in a '.zip' file).  Choose the newest file who's
+    * If you don't have any, you can grab the latest ones [here][dropbox-download-page](in a '.zip' file).  Choose the newest file who's
       name contains the name of the keymap you want (look for "qwerty" if
       you're not sure).
 
@@ -207,7 +200,7 @@ Notes:
 
 That is, how to change whether the rows or the columns are being driven.  This can be done for each side of the keyboard independently.
 
-* See [src/keyboard/ergodox/options.h] (src/keyboard/ergodox/options.h)
+* See [src/keyboard/ergodox/options.h](src/keyboard/ergodox/options.h)
 
 * After this, you'll need to recompile.  See the [About This Project]
   (#about-this-project) section above.
@@ -216,22 +209,22 @@ That is, how to change whether the rows or the columns are being driven.  This c
 ### Compile the Source Code
 (brief notes)
 
-Note: This relates to compiling in the [src] (src) directory.  The toplevel
+Note: This relates to compiling in the [src](src) directory.  The toplevel
 build process (for generating the ui-info file and such) isn't really intended
 to be portable; but you could probably get it working without *too* much
 trouble, if you're familiar with programming in a Unix environment.  I'd
 suggest looking through the toplevel Makefile, as a staring point, if that's
 your goal.
 
-* Read the [Dependencies] (#dependencies-for-building-from-source) section.
+* Read the [Dependencies](#dependencies-for-building-from-source) section.
 
 * Take a quickish glance at the [About This Project (more technical)]
   (#about-this-project-more-technical) section.
 
-* Navigate to the [src] (src) directory (*not* the toplevel directory) in a
+* Navigate to the [src](src) directory (*not* the toplevel directory) in a
   terminal, and type `make`.
 
-* If everything worked, the '.hex' and '.eep' files will be in the [src] (src)
+* If everything worked, the '.hex' and '.eep' files will be in the [src](src)
   directory (where you currently are).
 
 
@@ -241,12 +234,12 @@ your goal.
     * Keycode macros: see the file
       [src/lib/usb/usage-page/keyboard--short-names.h]
       (src/lib/usb/usage-page/keyboard--short-names.h).
-        * See [keyboard.h] (src/lib/usb/usage-page/keyboard.h) for the actual
+        * See [keyboard.h](src/lib/usb/usage-page/keyboard.h) for the actual
           values, with references to the specification.
     * Keyboard functions: see all files in the folder
-      [src/lib/key-functions/public] (src/lib/key-functions/public).
+      [src/lib/key-functions/public](src/lib/key-functions/public).
     * Template layout files: see the QWERTY keymap source files in the folder
-      [src/keyboard/ergodox/layout] (src/keyboard/ergodox/layout)
+      [src/keyboard/ergodox/layout](src/keyboard/ergodox/layout)
         * Currently [qwerty-kinesis-mod.c]
           (src/keyboard/ergodox/layout/qwerty-kinesis-mod.c) and
           [qwerty-kinesis-mod.h]
@@ -277,7 +270,7 @@ your goal.
       define all of them in the '.c' layout file, just the ones you want (C
       sets the uninitialized portions of the matrices to 0).
     * Make sure that in layer-0 **nothing is transparent** (see [About this
-      Project (more technical)] (#about-this-project-more-technical).  Behavior
+      Project (more technical)](#about-this-project-more-technical).  Behavior
       is undefined if this occurs (off the top of my head, it'll probably cause
       an infinite loop - and you'll have to reset your keyboard (unplug it and
       plug it in again)).
@@ -296,14 +289,14 @@ your goal.
 
 * All the function prototypes and macro definitions required by the rest of the
   code should be in the following files (using the ergodox code as an example):
-    * [controller.h] (src/keyboard/ergodox/controller.h)
-    * [layout.h] (src/keyboard/ergodox/layout.h) (which in the ergodox code
-      only exists to include 
+    * [controller.h](src/keyboard/ergodox/controller.h)
+    * [layout.h](src/keyboard/ergodox/layout.h) (which in the ergodox code
+      only exists to include
       [layout/default--led-control.h]
       (src/keyboard/ergodox/layout/default--led-control.h) and
       [layout/default--matrix-control.h]
       (src/keyboard/ergodox/layout/default--matrix-control.h))
-    * [matrix.h] (src/keyboard/ergodox/matrix.h)
+    * [matrix.h](src/keyboard/ergodox/matrix.h)
 
 * (In broad terms, you'll need to define functions that initialize and update
   the matrix, LED control macros, macros defining matrix dimensions, and
@@ -318,15 +311,14 @@ your goal.
   of your keyboard's directory (e.g. in `src/keyboard/new-keyboard-name`).
   They may include other '.h' files if you wish to put various definitions or
   prototypes in other places.  They will be included (with the help of some
-  handy macros) in the corresponding files in [src/keyboard] (src/keyboard),
+  handy macros) in the corresponding files in [src/keyboard](src/keyboard),
   which are in turn the files included by "main" and the keyboard functions.
 
 * If you change the way things are included, be careful for circular includes.
   "main", the keyboard functions, and the keyboard code all need various
   parts of each other.
 
-* Make sure to keep your eye on the `SRC` variable in [src/makefile]
-  (src/makefile), to make sure all your '.c' files are getting compiled.
+* Make sure to keep your eye on the `SRC` variable in [src/makefile](src/makefile), to make sure all your '.c' files are getting compiled.
 
 
 
@@ -336,7 +328,7 @@ your goal.
 
 -------------------------------------------------------------------------------
 
-Copyright &copy; 2012 Ben Blazak <benblazak.dev@gmail.com>  
-Released under The MIT License (MIT) (see "license.md")  
+Copyright &copy; 2012 Ben Blazak <benblazak.dev@gmail.com>
+Released under The MIT License (MIT) (see "license.md")
 Project located at <https://github.com/benblazak/ergodox-firmware>
 
