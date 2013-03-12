@@ -147,14 +147,6 @@ def gen_derived(data):
 	Should be called last
 	"""
     return {}
-	# return {
-	# 	'miscellaneous': {
-	# 		'number-of-layers':
-	# 			int( data['layout-matrices']['_kb_layout']['length']/(6*14) ),
-	# 			# because 6*14 is the number of bytes/layer for '_kb_layout'
-	# 			# (which is a uint8_t matrix)
-	# 	},
-	}
 
 # -----------------------------------------------------------------------------
 
