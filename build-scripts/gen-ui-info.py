@@ -28,90 +28,90 @@ _FORMAT_DESCRIPTION = ("""
  * ------------------------------------------------------------------------- */
 
 var ui_info = {
-    ".meta-data": {                    // for the JSON file
-        "version": "<number>",
-        "date-generated": "<string>",  // format: RFC 3339
+	".meta-data": {                    // for the JSON file
+		"version": "<number>",
+		"date-generated": "<string>",  // format: RFC 3339
 		"description": "<string>",
-    },
-    "keyboard-functions": {
-        "<(function name)>": {
-            "position": "<number>",  // as given by the .map file
-            "length": "<number>",    // as given by the .map file
-            "comments": {
-                "name": "<string>",  // more user friendly name
-                "description": "<string>",
-                "notes": [
-                    "<string>",
-                    "..."
-                ],
-                "..."
-            }
-        },
-        "..."
-    },
-    "layout-matrices": {
-        "<(matrix name)>": {
-            "position": "<number>",  // as given by the .map file
-            "length": "<number>"     // as given by the .map file
-        },
-        "..."
-    },
-    "mappings": {
-        /*
-         * The mappings prefixed with 'matrix' have their elements in the same
-         * order as the .hex file (whatever order that is).  The mappings
-         * prefixed with 'physical' will have their elements in an order
-         * corresponding to thier physical position on the keyboard.  You can
-         * convert between the two using the relative positions of the key-ids
-         * in 'physical-positions' and 'matrix-positions'.
-         *
-         * The current order of 'physical' mappings is:
-         * --------------------------------------------
-         * // left hand, spatial positions
-         * 00, 01, 02, 03, 04, 05, 06,
-         * 07, 08, 09, 10, 11, 12, 13,
-         * 14, 15, 16, 17, 18, 19,
-         * 20, 21, 22, 23, 24, 25, 26,
-         * 27, 28, 29, 30, 31,
-         *                     32, 33,
-         *                     34, 35, 36,
-         *                     37, 38, 39,
+	},
+	"keyboard-functions": {
+		"<(function name)>": {
+			"position": "<number>",  // as given by the .map file
+			"length": "<number>",    // as given by the .map file
+			"comments": {
+				"name": "<string>",  // more user friendly name
+				"description": "<string>",
+				"notes": [
+					"<string>",
+					"..."
+				],
+				"..."
+			}
+		},
+		"..."
+	},
+	"layout-matrices": {
+		"<(matrix name)>": {
+			"position": "<number>",  // as given by the .map file
+			"length": "<number>"     // as given by the .map file
+		},
+		"..."
+	},
+	"mappings": {
+		/*
+		 * The mappings prefixed with 'matrix' have their elements in the same
+		 * order as the .hex file (whatever order that is).  The mappings
+		 * prefixed with 'physical' will have their elements in an order
+		 * corresponding to thier physical position on the keyboard.  You can
+		 * convert between the two using the relative positions of the key-ids
+		 * in 'physical-positions' and 'matrix-positions'.
+		 *
+		 * The current order of 'physical' mappings is:
+		 * --------------------------------------------
+		 * // left hand, spatial positions
+		 * 00, 01, 02, 03, 04, 05, 06,
+		 * 07, 08, 09, 10, 11, 12, 13,
+		 * 14, 15, 16, 17, 18, 19,
+		 * 20, 21, 22, 23, 24, 25, 26,
+		 * 27, 28, 29, 30, 31,
+		 *                     32, 33,
+		 *                     34, 35, 36,
+		 *                     37, 38, 39,
 
-         * // right hand, spatial positions
-         *     40, 41, 42, 43, 44, 45, 46,
-         *     47, 48, 49, 50, 51, 52, 53,
-         *         54, 55, 56, 57, 58, 59,
-         *     60, 61, 62, 63, 64, 65, 66,
-         *             67, 68, 69, 70, 71,
-         *     72, 73,
-         * 74, 75, 76,
-         * 77, 78, 79,
-         * --------------------------------------------
-         */
+		 * // right hand, spatial positions
+		 *     40, 41, 42, 43, 44, 45, 46,
+		 *     47, 48, 49, 50, 51, 52, 53,
+		 *         54, 55, 56, 57, 58, 59,
+		 *     60, 61, 62, 63, 64, 65, 66,
+		 *             67, 68, 69, 70, 71,
+		 *     72, 73,
+		 * 74, 75, 76,
+		 * 77, 78, 79,
+		 * --------------------------------------------
+		 */
 
-        "physical-positions": [  // list of key-ids
-            "<string>", "..."
-        ],
-        "matrix-positions": [    // list of key-ids
-            "<string>", "..."
-        ],
-        "matrix-layout": [
-            [  // begin layer
-                [  // begin key
-                    "<number>",  // keycode
-                    "<string>",  // press function name (ex: 'kbfun_...')
-                    "<string>"   // release function name (ex: 'NULL')
-                ],
-                "..."  // more keys
-            ],
-            "..."  // more layers
-        ]
-    },
-    "miscellaneous": {
-        "git-commit-date": "<string>",  // format: RFC 3339
-        "git-commit-id": "<string>",
-        "number-of-layers": "<number>"
-    }
+		"physical-positions": [  // list of key-ids
+			"<string>", "..."
+		],
+		"matrix-positions": [    // list of key-ids
+			"<string>", "..."
+		],
+		"matrix-layout": [
+			[  // begin layer
+				[  // begin key
+					"<number>",  // keycode
+					"<string>",  // press function name (ex: 'kbfun_...')
+					"<string>"   // release function name (ex: 'NULL')
+				],
+				"..."  // more keys
+			],
+			"..."  // more layers
+		]
+	},
+	"miscellaneous": {
+		"git-commit-date": "<string>",  // format: RFC 3339
+		"git-commit-id": "<string>",
+		"number-of-layers": "<number>"
+	}
 }
 """)[1:-1]
 
@@ -146,14 +146,14 @@ def gen_derived(data):
 	Generate derived information
 	Should be called last
 	"""
-    return {}
+	return {}
 
 # -----------------------------------------------------------------------------
 
 def parse_mapfile(map_file_path):
 	"""Parse the '.map' file"""
 
-    return {}
+	return {}
 	# def parse_keyboard_function(f, line):
 	# 	"""Parse keyboard-functions in the '.map' file"""
 
