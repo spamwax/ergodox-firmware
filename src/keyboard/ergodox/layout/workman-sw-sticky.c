@@ -65,11 +65,16 @@ void kbfun_layer_pop_all(void) {
 #define  ktrans   &kbfun_transparent
 #define  lpush1   &kbfun_layer_push_1
 #define  lpush2   &kbfun_layer_push_2
+#define  lpush3   &kbfun_layer_push_3
+#define  lpush4   &kbfun_layer_push_4
+#define  lpush5   &kbfun_layer_push_5
 #define  lsticky1   &kbfun_layer_sticky_1
 #define  lsticky2   &kbfun_layer_sticky_2
 #define  lpop     &kbfun_layer_pop_all
 #define  lpop1    &kbfun_layer_pop_1
 #define  lpop2    &kbfun_layer_pop_2
+#define  lpop3    &kbfun_layer_pop_3
+#define  lpop4    &kbfun_layer_pop_4
 #define  dbtldr   &kbfun_jump_to_bootloader
 #define  sshprre  &kbfun_shift_press_release
 // ----------------------------------------------------------------------------
