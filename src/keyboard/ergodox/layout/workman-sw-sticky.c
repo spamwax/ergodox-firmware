@@ -99,24 +99,23 @@ KB_MATRIX_LAYER(
 	KEY_Home,	0,	0,
 	KEY_End,	KEY_ReturnEnter,	KEY_Spacebar
 ),
-// LAYER 1
 KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	0,	0,	0,	0,	0,	0,	0,
-	0,	KEY_1_Exclamation,	KEY_2_At,	KEY_3_Pound,	KEY_4_Dollar,	KEY_5_Percent,	0,
-	0,	KEY_SingleQuote_DoubleQuote,	0x34,	0x2F,	0x30,	KEY_Equal_Plus,
-	0,	0x31,	KEY_Backslash_Pipe,	KEY_Dash_Underscore,	KEY_DeleteForward,	KEY_DeleteBackspace,	0,
-	KEY_LeftArrow,	KEY_RightArrow,	KEY_UpArrow,	KEY_DownArrow,	0,
+	0,	KEY_1_Exclamation,	KEY_2_At,	KEY_3_Pound,	KEY_4_Dollar,	KEY_5_Percent,	KEY_Dash_Underscore,
+	KEY_GraveAccent_Tilde,	KEY_LeftBracket_LeftBrace,	KEY_RightBracket_RightBrace,	0x2F,	0x30,	KEYPAD_Percent,	0,
+	KEYPAD_Ampersand,	0x34,	KEYPAD_Slash,	KEYPAD_Minus,	KEYPAD_0_Insert,	0x33,
+	0x35,	KEYPAD_6_RightArrow,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	KEYPAD_Plus,	0,
+	0,	0,	0,	0,	0,
 	0,	0,
 	0,	0,	0,
-	0,	0,	0,
+	0,	0,	1,
 	// right hand
-	0,	0,	0,	0,	0,	0,	0,
-	0,	KEY_6_Caret,	KEY_7_Ampersand,	KEYPAD_Asterisk,	KEYPAD_Minus,	KEY_GraveAccent_Tilde,	0,
-	KEYPAD_Plus,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	KEY_LeftBracket_LeftBrace,	KEY_RightBracket_RightBrace,	0,
-	0,	KEY_GraveAccent_Tilde,	KEY_DownArrow,	KEY_UpArrow,	KEY_LeftArrow,	KEY_RightArrow,	0,
+	KEY_Equal_Plus,	KEY_6_Caret,	KEY_7_Ampersand,	KEY_8_Asterisk,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	0,
+	0,	KEY_4_Dollar,	0x2D,	KEYPAD_Pound,	KEYPAD_At,	KEYPAD_Exclamation,	KEYPAD_Caret,
+	KEY_Backslash_Pipe,	KEYPAD_1_End,	KEYPAD_LeftParenthesis,	KEYPAD_RightParenthesis,	KEYPAD_Equal,	0x38,
+	0,	KEYPAD_Asterisk,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	KEYPAD_4_LeftArrow,	KEYPAD_5,	0x31,
 	0,	0,	0,	0,	0,
 	0,	0,
 	0,	0,	0,
@@ -127,20 +126,43 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	0,	0,	0,	0,	0,	0,	0,
-	0,	KEY_F9,	KEY_F10,	KEY_F11,	KEY_F12,	KEY_VolumeUp,	0,
-	0,	KEY_F5,	KEY_F6,	KEY_F7,	KEY_F8,	KEY_VolumeDown,
-	0,	KEY_F1,	KEY_F2,	KEY_F3,	KEY_F4,	KEY_Mute,	0,
-	0,	0,	0,	0,	0,
+	0,	KEY_F1,	KEY_F2,	KEY_F3,	KEY_F4,	KEY_F5,	KEY_F11,
+	0,	0,	KEYPAD_A,	KEYPAD_B,	KEYPAD_C,	KEYPAD_Minus,	0,
+	0,	0,	KEYPAD_D,	KEYPAD_E,	KEYPAD_F,	KEYPAD_Plus,
+	0,	KEY_4_Dollar,	KEYPAD_Equal,	KEY_x_X,	0x33,	KEY_Semicolon_Colon,	0,
+	3,	0,	0,	0,	0,
 	0,	0,
 	0,	0,	0,
 	0,	0,	0,
 	// right hand
-	0,	0,	KEYPAD_NumLock_Clear,	KEYPAD_Asterisk,	KEYPAD_Slash,	KEY_5_Percent,	0,
-	0,	KEYPAD_Minus,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	KEYPAD_Plus,	0,
-	KEYPAD_Equal,	KEYPAD_4_LeftArrow,	KEYPAD_5,	KEYPAD_6_RightArrow,	KEYPAD_0_Insert,	0,
-	0,	KEY_Comma_LessThan,	KEYPAD_1_End,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	KEYPAD_Period_Delete,	0,
-	0,	0,	0,	0,	0,
+	KEY_F12,	KEY_F6,	KEY_F7,	KEY_F8,	KEY_F9,	KEY_F10,	0,
+	0,	KEYPAD_LeftParenthesis,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	0,	KEYPAD_Minus,
+	KEYPAD_RightParenthesis,	KEYPAD_4_LeftArrow,	KEYPAD_5,	KEYPAD_6_RightArrow,	KEYPAD_Equal,	KEYPAD_Plus,
+	0,	KEYPAD_00,	KEYPAD_1_End,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	KEYPAD_Slash,	KEYPAD_Asterisk,
+	0,	0,	0,	0,	2,
+	KEY_Spacebar,	0,
+	0,	0,	0,
+	0,	0,	KEYPAD_0_Insert
+),
+// LAYER 3
+KB_MATRIX_LAYER(
+	// unused
+	0,
+	// left hand
+	0,	0,	0,	0,	0,	0,	0,
+	0,	0,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	0,	0,
+	0,	0,	KEYPAD_4_LeftArrow,	KEYPAD_5,	KEYPAD_6_RightArrow,	0,
+	0,	0,	KEYPAD_1_End,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	0,	0,
+	4,	0,	0,	0,	0,
+	0,	0,
+	0,	0,	0,
+	KEY_Home,	KEY_End,	0,
+	// right hand
+	0,	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	KEY_UpArrow,	0,	0,	0,
+	0,	KEY_LeftArrow,	KEY_DownArrow,	KEY_RightArrow,	0,	0,
+	0,	0,	0,	KEY_UpArrow,	0,	0,	0,
+	KEY_LeftArrow,	KEY_DownArrow,	KEY_RightArrow,	0,	3,
 	0,	0,
 	0,	0,	0,
 	0,	0,	0
