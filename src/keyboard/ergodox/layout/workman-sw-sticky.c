@@ -81,23 +81,23 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	KEY_GraveAccent_Tilde,	KEY_1_Exclamation,	KEY_2_At,	KEY_3_Pound,	KEY_4_Dollar,	KEY_5_Percent,	KEY_LeftBracket_LeftBrace,
-	KEY_LeftControl,	KEY_q_Q,	KEY_w_W,	KEY_f_F,	KEY_p_P,	KEY_g_G,	KEY_Equal_Plus,
-	KEY_LeftShift,	KEY_a_A,	KEY_r_R,	KEY_s_S,	KEY_t_T,	KEY_d_D,
-	KEY_LeftGUI,	KEY_z_Z,	KEY_x_X,	KEY_c_C,	KEY_v_V,	KEY_b_B,	0,
-	KEY_Home,	KEY_End,	KEY_PageUp,	KEY_PageDown,	1,
-	KEY_Tab,	KEY_Spacebar,
-	0,	0,	KEY_ReturnEnter,
-	KEY_Escape,	2,	KEY_LeftAlt,
+	KEY_GraveAccent_Tilde,	KEYPAD_Clear,	KEY_Cut,	KEY_Copy,	KEY_Paste,	KEY_Find,	KEY_Execute,
+	KEY_Dash_Underscore,	KEY_q_Q,	KEY_d_D,	KEY_r_R,	KEY_w_W,	KEY_b_B,	KEY_LeftBracket_LeftBrace,
+	KEY_Tab,	KEY_a_A,	KEY_s_S,	KEY_h_H,	KEY_t_T,	KEY_g_G,
+	KEY_LeftShift,	KEY_z_Z,	KEY_x_X,	KEY_m_M,	KEY_c_C,	KEY_v_V,	1,
+	2,	KEYPAD_NumLock_Clear,	KEY_PageUp,	KEY_PageDown,	KEY_DeleteForward,
+	KEY_LeftControl,	KEY_LeftAlt,
+	0,	0,	KEY_Escape,
+	KEY_DeleteBackspace,	KEY_LeftGUI,	1,
 	// right hand
-	KEY_RightBracket_RightBrace,	KEY_6_Caret,	KEY_7_Ampersand,	KEY_8_Asterisk,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	KEY_Backslash_Pipe,
-	KEY_Dash_Underscore,	KEY_j_J,	KEY_l_L,	KEY_u_U,	KEY_y_Y,	KEY_Semicolon_Colon,	KEY_RightControl,
-	KEY_h_H,	KEY_n_N,	KEY_e_E,	KEY_i_I,	KEY_o_O,	KEY_RightShift,
-	2,	KEY_k_K,	KEY_m_M,	KEY_Comma_LessThan,	KEY_Period_GreaterThan,	KEY_Slash_Question,	KEY_RightGUI,
-	1,	KEY_DownArrow,	KEY_UpArrow,	KEY_LeftArrow,	KEY_RightArrow,
-	KEY_Insert,	KEY_DeleteForward,
-	0,	0,	0,
-	KEY_DeleteBackspace,	KEY_ReturnEnter,	KEY_Spacebar
+	KEY_Menu,	KEY_Mute,	KEY_Undo,	KEY_Execute,	KEY_Again,	KEY_Cancel,	KEY_Backslash_Pipe,
+	KEY_RightBracket_RightBrace,	KEY_j_J,	KEY_f_F,	KEY_u_U,	KEY_p_P,	KEY_Semicolon_Colon,	KEY_Equal_Plus,
+	KEY_y_Y,	KEY_n_N,	KEY_e_E,	KEY_o_O,	KEY_i_I,	KEY_RightGUI,
+	1,	KEY_k_K,	KEY_l_L,	KEY_Comma_LessThan,	KEY_Period_GreaterThan,	KEY_SingleQuote_DoubleQuote, KEY_RightShift,
+	KEY_LeftArrow,	KEY_DownArrow,	KEY_UpArrow,	KEY_RightArrow,	3,
+	KEY_RightAlt,	KEY_RightControl,
+	KEY_Home,	0,	0,
+	KEY_End,	KEY_ReturnEnter,	KEY_Spacebar
 ),
 // LAYER 1
 KB_MATRIX_LAYER(
