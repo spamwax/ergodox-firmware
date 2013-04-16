@@ -99,6 +99,7 @@ KB_MATRIX_LAYER(
 	KEY_Home,	0,	0,
 	KEY_End,	KEY_ReturnEnter,	KEY_Spacebar
 ),
+// LAYER 1
 KB_MATRIX_LAYER(
 	// unused
 	0,
@@ -167,6 +168,29 @@ KB_MATRIX_LAYER(
 	0,	0,	0,
 	0,	0,	0
 ),
+// LAYER 4
+KB_MATRIX_LAYER(
+	// unused
+	0,
+	// left hand
+	0,	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	0,	0,	0,	0,
+	4,	0,	0,	0,	0,
+	0,	0,
+	0,	0,	0,
+	0,	0,	0,
+	// right hand
+	0,	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	0,	0,	0,	0,
+	0,	0,	0,	0,	5,
+	0,	0,
+	0,	0,	0,
+	0,	0,	0
+),
 };
 // ----------------------------------------------------------------------------
 
@@ -184,7 +208,7 @@ KB_MATRIX_LAYER(
 	lpush2,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,
 	NULL,	NULL,	kprrel,
-	kprrel,	kprrel,	lsticky1,
+	kprrel,	kprrel,	lpush1,
 	// right hand
 	kprrel, 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel, 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
@@ -260,9 +284,9 @@ KB_MATRIX_LAYER(
 	ktrans,	kprrel,	kprrel,	kprrel,	ktrans,	ktrans,
 	ktrans,	ktrans,	ktrans,	kprrel,	ktrans,	ktrans,	ktrans,
 	kprrel,	kprrel,	kprrel,	ktrans,	lpop3,
-	NULL,	NULL,
-	NULL,	NULL,	NULL,
-	NULL,	ktrans,	ktrans
+	ktrans,	ktrans,
+	ktrans,	NULL,	NULL,
+	ktrans,	ktrans,	ktrans
 ),
 // LAYER 4
 KB_MATRIX_LAYER(
@@ -300,39 +324,39 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
-	kprrel,	kprrel,	kprrel,	kprrel,	lsticky1,
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	lsticky1,
+	NULL,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,
 	NULL,	NULL,	kprrel,
-	kprrel,	lsticky2,	kprrel,
+	kprrel,	kprrel,	NULL,
 	// right hand
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	lsticky2,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	lsticky1,	kprrel,	kprrel,	kprrel,	kprrel,
-	kprrel,	kprrel,
-	NULL,	NULL,	NULL,
-	kprrel,	kprrel,	kprrel
+	kprrel, 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
+	kprrel, 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
+	kprrel, 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
+	lsticky1,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
+	kprrel, 	kprrel,	kprrel,	kprrel,	NULL,
+	kprrel, 	kprrel,
+	kprrel, 	NULL,	NULL,
+	kprrel, 	kprrel,	kprrel
 ),
 // LAYER 1
 KB_MATRIX_LAYER(
 	// unused
 	NULL,
 	// left hand
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
-	ktrans,	sshprre,	sshprre,	sshprre,	sshprre,	sshprre,	ktrans,
-	ktrans,	kprrel,	sshprre,	sshprre,	sshprre,	kprrel,
-	kprrel,	sshprre,	kprrel,	sshprre,	kprrel,	kprrel,	ktrans,
-	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
+	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
+	kprrel,	kprrel,	kprrel,	sshprre,	sshprre,	kprrel,	ktrans,
+	kprrel,	sshprre,	kprrel,	kprrel,	kprrel,	sshprre,
+	sshprre,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
 	ktrans,	ktrans,
 	NULL,	NULL,	ktrans,
-	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	NULL,
 	// right hand
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
-	ktrans,	sshprre,	sshprre,	kprrel,	kprrel,	kprrel,	ktrans,
-	kprrel,	sshprre,	sshprre,	kprrel,	kprrel,	ktrans,
-	ktrans,	sshprre,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
+	ktrans,	kprrel,	sshprre,	kprrel,	kprrel,	kprrel,	kprrel,
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	sshprre,
+	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	sshprre,
 	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
 	ktrans,	ktrans,
 	ktrans,	NULL,	NULL,
@@ -343,20 +367,66 @@ KB_MATRIX_LAYER(
 	// unused
 	NULL,
 	// left hand
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
-	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
-	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
+	ktrans,	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
+	ktrans,	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,
+	ktrans,	kprrel,	kprrel,	kprrel,	sshprre,	kprrel,	ktrans,
+	NULL,	ktrans,	ktrans,	ktrans,	ktrans,
 	ktrans,	ktrans,
 	NULL,	NULL,	ktrans,
-	kprrel,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,
 	// right hand
-	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	sshprre,	ktrans,
-	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
+	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	ktrans,	kprrel,
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	NULL,
+	kprrel,	ktrans,
+	ktrans,	NULL,	NULL,
+	ktrans,	ktrans,	kprrel
+),
+// LAYER 3
+KB_MATRIX_LAYER(
+	// unused
+	NULL,
+	// left hand
+	NULL,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	kprrel,	kprrel,	kprrel,	ktrans,	ktrans,
+	ktrans,	ktrans,	kprrel,	kprrel,	kprrel,	ktrans,
+	ktrans,	ktrans,	kprrel,	kprrel,	kprrel,	ktrans,	ktrans,
+	NULL,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,
+	NULL,	NULL,	ktrans,
+	kprrel,	kprrel,	ktrans,
+	// right hand
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	NULL,
+	ktrans,	ktrans,	ktrans,	kprrel,	ktrans,	ktrans,	ktrans,
+	ktrans,	kprrel,	kprrel,	kprrel,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	kprrel,	ktrans,	ktrans,	ktrans,
+	kprrel,	kprrel,	kprrel,	ktrans,	NULL,
+	NULL,	NULL,
+	NULL,	NULL,	NULL,
+	NULL,	ktrans,	ktrans
+),
+// LAYER 4
+KB_MATRIX_LAYER(
+	// unused
+	NULL,
+	// left hand
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+	NULL,	NULL,	NULL,	NULL,	NULL,
+	NULL,	NULL,
+	NULL,	NULL,	NULL,
+	NULL,	NULL,	NULL,
+	// right hand
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	NULL,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	NULL,
 	ktrans,	ktrans,
 	ktrans,	NULL,	NULL,
 	ktrans,	ktrans,	ktrans
