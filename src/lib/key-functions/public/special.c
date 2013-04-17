@@ -30,6 +30,20 @@
 // ----------------------------------------------------------------------------
 
 
+
+/*
+ * [name]
+ *   GUI + press|release
+ *
+ * [description]
+ *   Generate a 'gui' press or release before the normal keypress or
+ *   keyrelease
+ */
+void kbfun_gui_press_release(void) {
+	_kbfun_press_release(IS_PRESSED, KEY_LeftGUI);
+	kbfun_press_release();
+}
+
 /*
  * [name]
  *   Shift + press|release
