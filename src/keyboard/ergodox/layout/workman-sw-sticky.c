@@ -130,6 +130,7 @@ KB_MATRIX_LAYER(
 	0,	KEY_RightControl,
 	0,	0,	0,
 	0,	0,	0
+),
 // LAYER 2
 KB_MATRIX_LAYER(
 	// unused
