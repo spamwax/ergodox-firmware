@@ -38,7 +38,7 @@
  *   keyrelease
  */
 void kbfun_ctrl_press_release(void) {
-	_kbfun_press_release(IS_PRESSED, KEY_LeftCtrl);
+	_kbfun_press_release(IS_PRESSED, KEY_RightControl);
 	kbfun_press_release();
 }
 
