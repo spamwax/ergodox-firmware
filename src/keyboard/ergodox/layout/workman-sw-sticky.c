@@ -251,7 +251,7 @@ KB_MATRIX_LAYER(
 	ktrans,	ktrans,	ktrans
 ),
 // LAYER 2
-KB_MNULL,
+KB_MATRIX_LAYER(
 	// left hand
 	lpop,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	ktrans,	ktrans,	sshprre,	sshprre,	sshprre,	kprrel,	ktrans,
