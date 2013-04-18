@@ -29,7 +29,18 @@
 
 // ----------------------------------------------------------------------------
 
-
+/*
+ * [name]
+ *   Ctrl + press|release
+ *
+ * [description]
+ *   Generate a 'Ctrl' press or release before the normal keypress or
+ *   keyrelease
+ */
+void kbfun_ctrl_press_release(void) {
+	_kbfun_press_release(IS_PRESSED, KEY_LeftCtrl);
+	kbfun_press_release();
+}
 
 /*
  * [name]
@@ -54,6 +65,20 @@ void kbfun_gui_press_release(void) {
  */
 void kbfun_shift_press_release(void) {
 	_kbfun_press_release(IS_PRESSED, KEY_LeftShift);
+	kbfun_press_release();
+}
+
+/*
+ * [name]
+ *   Shift + GUI + press|release
+ *
+ * [description]
+ *   Generate a 'shift+gui' press or release before the normal keypress or
+ *   keyrelease
+ */
+void kbfun_shift_gui_press_release(void) {
+	_kbfun_press_release(IS_PRESSED, KEY_LeftShift);
+	_kbfun_press_release(IS_PRESSED, KEY_LeftGUI);
 	kbfun_press_release();
 }
 
