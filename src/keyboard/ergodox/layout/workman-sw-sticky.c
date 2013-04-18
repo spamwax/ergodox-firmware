@@ -253,6 +253,8 @@ KB_MATRIX_LAYER(
 ),
 // LAYER 2
 KB_MATRIX_LAYER(
+    // unused
+	NULL,
 	// left hand
 	lpop,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	ktrans,	ktrans,	sshprre,	sshprre,	sshprre,	kprrel,	ktrans,
