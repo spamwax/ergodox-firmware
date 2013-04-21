@@ -143,7 +143,7 @@ KB_MATRIX_LAYER(
 	0 , _4 , _equal_kp , _X , 0x33 , _semicolon , 0 ,
 	0,	0,	0,	0,	0,
 	_space,	KEY_LeftAlt,
-	0,	0,	1,
+	0,	0,	_altL,
 	_bs,	KEY_LeftGUI,	KEY_Escape,
 	// right hand
 	0  , 0           , 0        , 0     , 0         , 0       , 2       ,
