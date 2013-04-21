@@ -88,25 +88,25 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
 // LAYER 0
 KB_MATRIX_LAYER(
 	// unused
-	0,
+		0,
 	// left hand
 	KEY_GraveAccent_Tilde,	KEY_Stop,	KEY_x_X,	KEY_c_C,	KEY_v_V,	KEY_f_F,	KEY_n_N,
-	KEY_Slash_Question,	KEY_q_Q,	KEY_d_D,	KEY_r_R,	KEY_w_W,	KEY_b_B,	KEY_Tab,
+	KEY_Slash_Question,	KEY_q_Q,	KEY_d_D,	KEY_r_R,	KEY_w_W,	KEY_b_B,	KEY_ReturnEnter,
 	KEY_LeftControl,	KEY_a_A,	KEY_s_S,	KEY_h_H,	KEY_t_T,	KEY_g_G,
-	KEY_LeftShift,	KEY_z_Z,	KEY_x_X,	KEY_m_M,	KEY_c_C,	KEY_v_V,	KEY_ReturnEnter,
-	3,	KEY_CapsLock,	KEY_PageUp,	KEY_PageDown,	1,
-	KEY_Spacebar,	KEY_LeftAlt,
-	0,	0,	1,
+	KEY_LeftShift,	KEY_z_Z,	KEY_x_X,	KEY_m_M,	KEY_c_C,	KEY_v_V,	KEY_Tab,
+	KEY_Backslash_Pipe,	KEY_PageUp,	KEY_PageDown,	3,	1,
+	KEY_Spacebar,	KEY_DeleteForward,
+	0,	0,	KEY_LeftAlt,
 	KEY_DeleteBackspace,	KEY_LeftGUI,	KEY_Escape,
 	// right hand
 	KEY_Dash_Underscore,	KEY_Mute,	KEY_z_Z,	KEY_Spacebar,	KEY_z_Z,	KEY_c_C,	KEY_Equal_Plus,
 	KEY_LeftBracket_LeftBrace,	KEY_j_J,	KEY_f_F,	KEY_u_U,	KEY_p_P,	KEY_Semicolon_Colon,	KEY_RightBracket_RightBrace,
 	KEY_y_Y,	KEY_n_N,	KEY_e_E,	KEY_o_O,	KEY_i_I,	KEY_RightControl,
 	2,	KEY_k_K,	KEY_l_L,	KEY_Comma_LessThan,	KEY_Period_GreaterThan,	KEY_SingleQuote_DoubleQuote,	KEY_RightShift,
-	KEY_LeftArrow,	KEY_DownArrow,	KEY_UpArrow,	KEY_RightArrow,	KEY_RightGUI,
-	KEY_DeleteForward,	KEY_RightAlt,
-	KEY_LeftArrow,	0,	0,
-	KEY_RightArrow,	KEY_ReturnEnter,	KEY_Spacebar
+	1,	KEY_Home,	KEY_End,	KEY_CapsLock,	KEY_RightGUI,
+	KEY_LeftArrow,	KEY_RightArrow,
+	KEY_RightAlt,	0,	0,
+	KEY_RightGUI,	KEY_ReturnEnter,	KEY_Spacebar
 ),
 // LAYER 1
 KB_MATRIX_LAYER(
@@ -115,7 +115,7 @@ KB_MATRIX_LAYER(
 	// left hand
 	0,	KEY_1_Exclamation,	KEY_2_At,	KEY_3_Pound,	KEY_4_Dollar,	KEY_5_Percent,	0,
 	KEY_GraveAccent_Tilde,	KEY_LeftBracket_LeftBrace,	KEY_RightBracket_RightBrace,	0x2F,	0x30,	KEY_5_Percent,	0,
-	KEY_7_Ampersand,	0x34,	KEYPAD_Slash,	KEYPAD_Minus,	KEYPAD_0_Insert,	0x33,
+	KEY_7_Ampersand,	0x34,	KEY_Slash_Question,	KEYPAD_Minus,	KEYPAD_0_Insert,	0x33,
 	0x35,	KEYPAD_6_RightArrow,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	KEYPAD_Plus,	0,
 	0,	KEY_PrintScreen,	0,	0,	0,
 	KEY_LeftShift,	0,
@@ -124,7 +124,7 @@ KB_MATRIX_LAYER(
 	// right hand
 	0,	KEY_6_Caret,	KEY_7_Ampersand,	KEY_8_Asterisk,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	1,
 	0,	KEY_4_Dollar,	0x2D,	KEY_3_Pound,	KEY_2_At,	KEY_1_Exclamation,	KEY_6_Caret,
-	KEY_Backslash_Pipe,	KEYPAD_1_End,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	KEYPAD_Equal,	0x38,
+	KEY_Backslash_Pipe,	KEYPAD_1_End,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	KEY_Equal_Plus,	KEY_Slash_Question,
 	0,	KEYPAD_Asterisk,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	KEYPAD_4_LeftArrow,	KEYPAD_5,	0x31,
 	0,	0,	0,	0,	0,
 	0,	KEY_RightControl,
@@ -136,19 +136,19 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	0,	KEY_F1,	KEY_F2,	KEY_F3,	KEY_F4,	KEY_F5,	KEY_F11,
+	0,	0,	0,	0,	0,	0,	0,
 	0,	0,	KEY_a_A,	KEY_b_B,	KEY_c_C,	KEYPAD_Minus,	0,
 	0,	0,	KEY_d_D,	KEY_e_E,	KEY_f_F,	KEYPAD_Plus,
 	0,	KEY_4_Dollar,	KEYPAD_Equal,	KEY_x_X,	0x33,	KEY_Semicolon_Colon,	0,
-	3,	0,	0,	0,	0,
+	0,	0,	0,	0,	0,
 	KEY_Spacebar,	KEY_LeftAlt,
 	0,	0,	1,
 	KEY_DeleteBackspace,	KEY_LeftGUI,	KEY_Escape,
 	// right hand
-	KEY_F12,	KEY_F6,	KEY_F7,	KEY_F8,	KEY_F9,	KEY_F10,	2,
+	0,	0,	0,	0,	0,	0,	2,
 	0,	KEY_9_LeftParenthesis,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	0,	KEYPAD_Minus,
 	KEY_0_RightParenthesis,	KEYPAD_4_LeftArrow,	KEYPAD_5,	KEYPAD_6_RightArrow,	KEYPAD_Equal,	KEYPAD_Plus,
-	0,	KEYPAD_00,	KEYPAD_1_End,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	KEYPAD_Slash,	KEYPAD_Asterisk,
+	0,	KEYPAD_Period_Delete,	KEYPAD_1_End,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	KEYPAD_Slash,	KEYPAD_Asterisk,
 	0,	0,	0,	0,	0,
 	0,	0,
 	0,	0,	0,
@@ -157,18 +157,18 @@ KB_MATRIX_LAYER(
 // LAYER 3
 KB_MATRIX_LAYER(
 	// unused
-		0,
+	0,
 	// left hand
-	0,	0,	0,	0,	0,	0,	0,
-	KEYPAD_Minus,	0,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	0,	0,
+	0,	KEY_F1,	KEY_F2,	KEY_F3,	KEY_F4,	KEY_F5,	KEY_F11,
+	KEYPAD_Minus,	0,	KEYPAD_7_Home,	KEYPAD_8_UpArrow,	KEYPAD_9_PageUp,	0,	KEY_VolumeUp,
 	KEYPAD_Plus,	KEYPAD_Equal,	KEYPAD_4_LeftArrow,	KEYPAD_5,	KEYPAD_6_RightArrow,	0,
-	KEYPAD_Asterisk,	KEYPAD_Slash,	KEYPAD_1_End,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	0,	0,
+	KEYPAD_Asterisk,	KEYPAD_Slash,	KEYPAD_1_End,	KEYPAD_2_DownArrow,	KEYPAD_3_PageDown,	KEYPAD_Period_Delete,	KEY_VolumeDown,
 	4,	0,	0,	0,	0,
 	0,	0,
 	0,	0,	0,
-	KEY_DeleteBackspace,	KEY_LeftGUI,	0,
+	0,	0,	0,
 	// right hand
-	0,	0,	0,	0,	0,	0,	3,
+	KEY_F12,	KEY_F6,	KEY_F7,	KEY_F8,	KEY_F9,	KEY_F10,	3,
 	0,	0,	0,	KEY_UpArrow,	0,	0,	0,
 	0,	KEY_LeftArrow,	KEY_DownArrow,	KEY_RightArrow,	0,	0,
 	0,	0,	0,	KEY_UpArrow,	0,	0,	0,
