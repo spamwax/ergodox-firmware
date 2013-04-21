@@ -165,9 +165,9 @@ KB_MATRIX_LAYER(
 	_add_kp , _equal_kp , _4_kp  , _5_kp  , _6_kp  , 0           ,
 	_mul_kp , _div_kp   , _1_kp  , _2_kp  , _3_kp  , _dec_del_kp , _volumeD ,
 	4,	0,	0,	0,	0,
-	0,	0,
+	0,	_bs,
 	0,	0,	0,
-	0,	0,	0,
+	_0_kp,	0,	0,
 	// right hand
 	KEY_F12 , KEY_F6  , KEY_F7  , KEY_F8  , KEY_F9 , KEY_F10 , 3 ,
 	0       , 0       , 0       , _arrowU , 0      , 0       , 0 ,
