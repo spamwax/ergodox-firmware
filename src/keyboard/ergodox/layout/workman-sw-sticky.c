@@ -370,30 +370,30 @@ KB_MATRIX_LAYER(
 	ktrans , ktrans  , ktrans  , ktrans  , ktrans  ,
 	ktrans,	kprrel,
 	ktrans,	NULL,	NULL,
-	ktrans,	ktrans,	ktrans
+	kprrel,	ktrans,	ktrans
 ),
 // LAYER 2
 KB_MATRIX_LAYER(
 	// unused
 	NULL,
 	// left hand
-	NULL,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
-	ktrans,	ktrans,	sshprre,	sshprre,	sshprre,	kprrel,	ktrans,
-	ktrans,	ktrans,	sshprre,	sshprre,	sshprre,	kprrel,
-	ktrans,	sshprre,	kprrel,	kprrel,	sshprre,	kprrel,	ktrans,
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
-	kprrel,	kprrel,
-	NULL,	NULL,	kprrel,
-	kprrel,	kprrel,	kprrel,
+	NULL   , ktrans  , ktrans  , ktrans  , ktrans  , ktrans , ktrans ,
+	ktrans , ktrans  , sshprre , sshprre , sshprre , kprrel , ktrans ,
+	ktrans , ktrans  , sshprre , sshprre , sshprre , kprrel ,
+	ktrans , sshprre , kprrel  , kprrel  , sshprre , kprrel , ktrans ,
+	ktrans , ktrans  , ktrans  , ktrans  , ktrans  ,
+	kprrel , kprrel ,
+	NULL   , NULL   , kprrel ,
+	kprrel , kprrel , kprrel ,
 	// right hand
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	NULL,
-	ktrans,	sshprre,	kprrel,	kprrel,	kprrel,	ktrans,	kprrel,
-	sshprre,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
-	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
-	ktrans,	ktrans,
-	ktrans,	NULL,	NULL,
-	ktrans,	ktrans,	kprrel
+	ktrans  , ktrans  , ktrans , ktrans , ktrans , ktrans , NULL   ,
+	ktrans  , sshprre , kprrel , kprrel , kprrel , ktrans , kprrel ,
+	sshprre , kprrel  , kprrel , kprrel , kprrel , kprrel ,
+	ktrans  , kprrel  , kprrel , kprrel , kprrel , kprrel , kprrel ,
+	ktrans  , ktrans  , ktrans , ktrans , ktrans ,
+	ktrans , ktrans ,
+	ktrans , NULL   , NULL   ,
+	ktrans , ktrans , kprrel
 ),
 // LAYER 3
 KB_MATRIX_LAYER(
