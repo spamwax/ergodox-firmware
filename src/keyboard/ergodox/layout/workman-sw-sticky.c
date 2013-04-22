@@ -119,8 +119,8 @@ KB_MATRIX_LAYER(
 	// left hand
 	0      , _1        , _2        , _3      , _4    , _5      , 0 ,
 	_grave , _bracketL , _bracketR , 0x2F    , 0x30  , _5      , 0 ,
-	_7     , 0x34      , _slash    , _sub_kp , _0_kp , 0x33    ,
-	0x35   , _6_kp     , _7_kp     , _8_kp   , _9_kp , _add_kp , 0 ,
+	_7     , 0x34      , _slash    , _sub_kp , _0 , 0x33    ,
+	0x35   , _6     , _7     , _8   , _9 , _add_kp , 0 ,
 	0,	_print,	0,	0,	0,
 	KEY_LeftShift,	0,
 	0,	0,	0,
@@ -128,8 +128,8 @@ KB_MATRIX_LAYER(
 	// right hand
 	0          , _6      , _7    , _8    , _9     , _0     , 1    ,
 	0          , _4      , 0x2D  , _3    , _2     , _1     , _6   ,
-	_backslash , _1_kp   , _9    , _0    , _equal , _slash ,
-	0          , _mul_kp , _2_kp , _3_kp , _4_kp  , _5_kp  , 0x31 ,
+	_backslash , _1   , _9    , _0    , _equal , _slash ,
+	0          , _mul_kp , _2 , _3 , _4  , _5  , 0x31 ,
 	0,	0,	0,	0,	0,
 	0      , 0 ,
 	0      , 0 , 0 ,
