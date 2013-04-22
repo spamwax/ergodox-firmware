@@ -197,7 +197,7 @@ void kbfun_layer_push_1(void) {
  *   for each state:
  *  1) One time down (set on key press) - The layer was not active and the key
  *      has been pressed but not yet released. The layer is pushed in the one
- *      time down state. 
+ *      time down state.
  *  2) One time up (set on key release) - The layer was active when the layer
  *      sticky key was released. If a key on this layer (not set to
  *      transparent) was pressed before the key was released, the layer will be
@@ -233,6 +233,7 @@ void kbfun_layer_pop_1(void) {
  *   the top of the stack, and record the id of that layer element
  */
 void kbfun_layer_push_2(void) {
+	_kb_led_1_on();
 	layer_push(2);
 }
 
@@ -257,6 +258,7 @@ void kbfun_layer_sticky_2  (void) {
  *   touching any other elements)
  */
 void kbfun_layer_pop_2(void) {
+	_kb_led_1_off();
 	layer_pop(2);
 }
 
