@@ -140,7 +140,7 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	0 , 0  , 0         , 0  , 0    , 0          , 0 ,
+	0 , _1        , _2        , _3      , _4    , _5          , 0 ,
 	0 , 0  , _A        , _B , _C   , _sub_kp    , 0 ,
 	0 , 0  , _D        , _E , _F   , _add_kp    ,
 	0 , _4 , _equal_kp , _X , 0x33 , _semicolon , 0 ,
@@ -149,7 +149,7 @@ KB_MATRIX_LAYER(
 	0,	0,	_altL,
 	_bs,	KEY_LeftGUI,	KEY_Escape,
 	// right hand
-	0  , 0           , 0        , 0     , 0         , 0       , 2       ,
+	0  , _6      , _7    , _8    , _9     , _0       , 2       ,
 	0  , _9          , _7_kp    , _8_kp , _9_kp     , 0       , _sub_kp ,
 	_0 , _4_kp       , KEYPAD_5 , _6_kp , _equal_kp , _add_kp ,
 	0  , _dec_del_kp , _1_kp    , _2_kp , _3_kp     , _div_kp , _mul_kp ,
