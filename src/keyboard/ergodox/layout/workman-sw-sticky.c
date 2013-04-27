@@ -99,7 +99,7 @@ KB_MATRIX_LAYER(
 	_ctrlL  , _A         , _S     , _H     , _T , _G ,
 	_shiftL , _Z         , _X     , _M     , _C , _V , KEY_Tab ,
 	1       , _backslash , _pageU , _pageD , 3  ,
-	_space     , _del        ,
+	_del    , _space
 	0          , 0           , _altL ,
 	_bs        , KEY_LeftGUI , _esc  ,
 	// right hand
