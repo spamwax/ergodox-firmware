@@ -24,6 +24,7 @@
 
 // ----------------------------------------------------------------------------
 
+uint8_t		layers_head = 0;
 static bool _main_kb_is_pressed[KB_ROWS][KB_COLUMNS];
 bool (*main_kb_is_pressed)[KB_ROWS][KB_COLUMNS] = &_main_kb_is_pressed;
 
@@ -53,6 +54,9 @@ bool    main_arg_trans_key_pressed;
  */
 int main(void) {
 	kb_init();  // does controller initialization too
+
+	PORTD &= ~(1<<6);
+	DDRD  |=  (1<<6);
 
 	kb_led_state_power_on();
 
@@ -86,6 +90,11 @@ int main(void) {
 		#define is_pressed   main_arg_is_pressed
 		#define was_pressed  main_arg_was_pressed
 		for (row=0; row<KB_ROWS; row++) {
+			if (layers_head != 0)
+				_kb_led_6_on(); // layer LED on
+			else
+				_kb_led_6_off(); // layer LED off
+
 			for (col=0; col<KB_COLUMNS; col++) {
 				is_pressed = (*main_kb_is_pressed)[row][col];
 				was_pressed = (*main_kb_was_pressed)[row][col];
@@ -120,16 +129,16 @@ int main(void) {
 		_delay_ms(MAKEFILE_DEBOUNCE_TIME);
 
 		// update LEDs
-		if (keyboard_leds & (1<<0)) { kb_led_num_on(); }
-		else { kb_led_num_off(); }
-		if (keyboard_leds & (1<<1)) { kb_led_caps_on(); }
-		else { kb_led_caps_off(); }
-		if (keyboard_leds & (1<<2)) { kb_led_scroll_on(); }
-		else { kb_led_scroll_off(); }
-		if (keyboard_leds & (1<<3)) { kb_led_compose_on(); }
-		else { kb_led_compose_off(); }
-		if (keyboard_leds & (1<<4)) { kb_led_kana_on(); }
-		else { kb_led_kana_off(); }
+		// if (keyboard_leds & (1<<0)) { kb_led_num_on(); }
+		// else { kb_led_num_off(); }
+		// if (keyboard_leds & (1<<1)) { kb_led_caps_on(); }
+		// else { kb_led_caps_off(); }
+		// if (keyboard_leds & (1<<2)) { kb_led_scroll_on(); }
+		// else { kb_led_scroll_off(); }
+		// if (keyboard_leds & (1<<3)) { kb_led_compose_on(); }
+		// else { kb_led_compose_off(); }
+		// if (keyboard_leds & (1<<4)) { kb_led_kana_on(); }
+		// else { kb_led_kana_off(); }
 	}
 
 	return 0;
@@ -151,7 +160,7 @@ int main(void) {
  * ----------------------------------------------------------------------------
  * We keep track of which layer is foremost by placing it on a stack.  Layers
  * may appear in the stack more than once.  The base layer will always be
- * layer-0.  
+ * layer-0.
  *
  * Implemented as a fixed size stack.
  * ------------------------------------------------------------------------- */
@@ -167,7 +176,7 @@ struct layers {
 // ----------------------------------------------------------------------------
 
 struct layers layers[MAX_ACTIVE_LAYERS];
-uint8_t       layers_head = 0;
+// uint8_t       layers_head = 0;
 uint8_t       layers_ids_in_use[MAX_ACTIVE_LAYERS] = {true};
 
 /*

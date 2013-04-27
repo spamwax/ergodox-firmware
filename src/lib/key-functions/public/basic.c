@@ -171,6 +171,7 @@ static void layer_pop(uint8_t local_id) {
  */
 void kbfun_layer_push_1(void) {
 	layer_push(1);
+	_kb_led_1_on();
 }
 
 /*
@@ -223,6 +224,7 @@ void kbfun_layer_sticky_1  (void) {
  */
 void kbfun_layer_pop_1(void) {
 	layer_pop(1);
+	_kb_led_1_off();
 }
 
 /*
