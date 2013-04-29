@@ -122,17 +122,28 @@ static void layer_sticky(uint8_t local_id) {
 		uint8_t topLayer = main_layers_peek(0);
 		uint8_t topSticky = main_layers_peek_sticky(0);
 		main_layers_pop_id(layer_ids[local_id]);
+		if (local_id == 2)
+			_kb_led_2_off();
 		if (topLayer == local_id) {
-			if (topSticky == eStickyOnceUp)
+			if (topSticky == eStickyOnceUp) {
 				layer_ids[local_id] = main_layers_push(keycode, eStickyLock);
+				if (local_id == 2)
+					_kb_led_2_on();
+				else
+					_kb_led_2_off();
+			}
 		}
 		else
 		{
 			// only the topmost layer on the stack should be in sticky once state
 			if (topSticky == eStickyOnceDown || topSticky == eStickyOnceUp) {
 				main_layers_pop_id(layer_ids[topLayer]);
+				if (local_id == 2)
+					_kb_led_2_off();
 			}
 			layer_ids[local_id] = main_layers_push(keycode, eStickyOnceDown);
+			if (local_id == 2)
+				_kb_led_2_on();
 			// this should be the only place we care about this flag being cleared
 			main_arg_any_non_trans_key_pressed = false;
 		}
@@ -143,13 +154,17 @@ static void layer_sticky(uint8_t local_id) {
 		uint8_t topSticky = main_layers_peek_sticky(0);
 		if (topLayer == local_id) {
 			if (topSticky == eStickyOnceDown) {
-				// When releasing this sticky key, pop the layer always
+				// When releasing this sticky key, always pop the layer.
 				main_layers_pop_id(layer_ids[local_id]);
+				if (local_id == 2)
+					_kb_led_2_off();
 				if (!main_arg_any_non_trans_key_pressed) {
 					// If no key defined for this layer (a non-transparent key)
 					//  was pressed, push the layer again, but in the
 					//  StickyOnceUp state
 					layer_ids[local_id] = main_layers_push(keycode, eStickyOnceUp);
+					if (local_id == 2)
+						_kb_led_2_on();
 				}
 			}
 		}
@@ -171,7 +186,6 @@ static void layer_pop(uint8_t local_id) {
  */
 void kbfun_layer_push_1(void) {
 	layer_push(1);
-	_kb_led_1_on();
 }
 
 /*
@@ -224,7 +238,6 @@ void kbfun_layer_sticky_1  (void) {
  */
 void kbfun_layer_pop_1(void) {
 	layer_pop(1);
-	_kb_led_1_off();
 }
 
 /*
@@ -236,8 +249,7 @@ void kbfun_layer_pop_1(void) {
  *   the top of the stack, and record the id of that layer element
  */
 void kbfun_layer_push_2(void) {
-	keyboard_leds |= (1<<0);
-	// kb_led_num_on();
+	// keyboard_leds |= (1<<0);
 	layer_push(2);
 }
 
@@ -262,8 +274,7 @@ void kbfun_layer_sticky_2  (void) {
  *   touching any other elements)
  */
 void kbfun_layer_pop_2(void) {
-	keyboard_leds &= ~(1<<0);
-	// _kb_led_1_off();
+	// keyboard_leds &= ~(1<<0);
 	layer_pop(2);
 }
 

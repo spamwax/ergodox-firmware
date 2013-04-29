@@ -195,8 +195,15 @@ void main_exec_key(void) {
 
 	// If the current layer is in the sticky once up state and a key defined
 	//  for this layer (a non-transparent key) was pressed, pop the layer
-	if (layers[layers_head].sticky == eStickyOnceUp && main_arg_any_non_trans_key_pressed)
+	if (layers[layers_head].sticky == eStickyOnceUp && main_arg_any_non_trans_key_pressed) {
+		// if (layers[layers_head].layer == 2 || layers[layers_head].id == 2)
+		// 	_kb_led_2_off();
 		main_layers_pop_id(layers_head);
+	}
+	if (layers[layers_head].layer == 2)
+		_kb_led_2_on();
+	else
+		_kb_led_2_off();
 }
 
 /*
