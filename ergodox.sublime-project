@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Volumes/Home/hamid/Downloads/src/ergodox-firmware"
+		}
+	],
+	"settings":
+	{
+		"sublimeclang_options":
+		[
+			"-I/project/specific/path/1",
+			"-I/project/specific/path/2"
+		]
+	}
+}
