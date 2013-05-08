@@ -90,10 +90,10 @@ int main(void) {
 		#define is_pressed   main_arg_is_pressed
 		#define was_pressed  main_arg_was_pressed
 		for (row=0; row<KB_ROWS; row++) {
-			if (layers_head != 0)
-				_kb_led_6_on(); // layer LED on
-			else
-				_kb_led_6_off(); // layer LED off
+			// if (layers_head != 0)
+			// 	_kb_led_6_on(); // layer LED on
+			// else
+			// 	_kb_led_6_off(); // layer LED off
 
 			for (col=0; col<KB_COLUMNS; col++) {
 				is_pressed = (*main_kb_is_pressed)[row][col];
@@ -198,12 +198,26 @@ void main_exec_key(void) {
 	if (layers[layers_head].sticky == eStickyOnceUp && main_arg_any_non_trans_key_pressed) {
 		// if (layers[layers_head].layer == 2 || layers[layers_head].id == 2)
 		// 	_kb_led_2_off();
+		turn_off_sticky_led(layers[layers_head].layer);
 		main_layers_pop_id(layers_head);
 	}
-	if (layers[layers_head].layer == 2)
-		_kb_led_2_on();
-	else
+	if (layers[layers_head].layer != 0) {
+		if (layers[layers_head].layer == 1)
+			turn_on_sticky_led(1);
+			// _kb_led_1_on();
+		else if (layers[layers_head].layer == 2)
+			turn_on_sticky_led(2);
+			// _kb_led_2_on();
+		else if (layers[layers_head].layer == 3)
+			turn_on_sticky_led(3);
+			// _kb_led_3_on();
+	}
+	else {
+		_kb_led_1_off();
 		_kb_led_2_off();
+		_kb_led_3_off();
+	}
+
 }
 
 /*
@@ -272,6 +286,7 @@ void main_layers_pop_id(uint8_t id) {
 			for (; element<layers_head; element++) {
 				layers[element].layer = layers[element+1].layer;
 				layers[element].id = layers[element+1].id;
+				layers[element].sticky = layers[element+1].sticky;
 			}
 			// reinitialize the topmost (now unused) slot
 			layers[layers_head].layer = 0;

@@ -122,15 +122,17 @@ static void layer_sticky(uint8_t local_id) {
 		uint8_t topLayer = main_layers_peek(0);
 		uint8_t topSticky = main_layers_peek_sticky(0);
 		main_layers_pop_id(layer_ids[local_id]);
-		if (local_id == 2)
-			_kb_led_2_off();
+		// if (local_id == 2)
+		// 	_kb_led_2_off();
+		turn_off_sticky_led(local_id);
 		if (topLayer == local_id) {
 			if (topSticky == eStickyOnceUp) {
 				layer_ids[local_id] = main_layers_push(keycode, eStickyLock);
-				if (local_id == 2)
-					_kb_led_2_on();
-				else
-					_kb_led_2_off();
+				turn_on_sticky_led(local_id);
+				// if (local_id == 2)
+				// 	_kb_led_2_on();
+				// else
+				// 	_kb_led_2_off();
 			}
 		}
 		else
@@ -138,12 +140,14 @@ static void layer_sticky(uint8_t local_id) {
 			// only the topmost layer on the stack should be in sticky once state
 			if (topSticky == eStickyOnceDown || topSticky == eStickyOnceUp) {
 				main_layers_pop_id(layer_ids[topLayer]);
-				if (local_id == 2)
-					_kb_led_2_off();
+				turn_off_sticky_led(local_id);
+				// if (local_id == 2)
+				// 	_kb_led_2_off();
 			}
 			layer_ids[local_id] = main_layers_push(keycode, eStickyOnceDown);
-			if (local_id == 2)
-				_kb_led_2_on();
+			turn_on_sticky_led(local_id);
+			// if (local_id == 2)
+			// 	_kb_led_2_on();
 			// this should be the only place we care about this flag being cleared
 			main_arg_any_non_trans_key_pressed = false;
 		}
@@ -156,15 +160,17 @@ static void layer_sticky(uint8_t local_id) {
 			if (topSticky == eStickyOnceDown) {
 				// When releasing this sticky key, always pop the layer.
 				main_layers_pop_id(layer_ids[local_id]);
-				if (local_id == 2)
-					_kb_led_2_off();
+				turn_off_sticky_led(local_id);
+				// if (local_id == 2)
+				// 	_kb_led_2_off();
 				if (!main_arg_any_non_trans_key_pressed) {
 					// If no key defined for this layer (a non-transparent key)
 					//  was pressed, push the layer again, but in the
 					//  StickyOnceUp state
 					layer_ids[local_id] = main_layers_push(keycode, eStickyOnceUp);
-					if (local_id == 2)
-						_kb_led_2_on();
+					turn_on_sticky_led(local_id);
+					// if (local_id == 2)
+					// 	_kb_led_2_on();
 				}
 			}
 		}
@@ -566,6 +572,62 @@ void kbfun_layer_pop_10(void) {
 	layer_pop(10);
 }
 
+/* [name]
+ *   turn_off_sticky_led
+ *
+ * Arguments
+ * - 'local_id': the layer id for which the corresponding LED should be turned off
+ *
+ * [description]
+ * Turn off the LED (1, 2 or 3) for one of the sticky layers given by local_id
+ */
+ void turn_off_sticky_led (uint8_t local_id) {
+ 	if (local_id == 1 || local_id == 2 || local_id == 3) {
+ 		(DDRB &= ~(1<<(local_id+4)));
+ 	}
+ 	// switch (local_id) {
+ 	//     case 1:
+ 	//         (DDRB &= ~(1<<5));
+ 	//         break;
+ 	//     case 2:
+ 	//         (DDRB &= ~(1<<6));
+ 	//         break;
+		// case 3:
+ 	//         (DDRB &= ~(1<<7));
+ 	//         break;
+ 	//     default:
+ 	//         break;
+ 	// }
+ }
+ /* [name]
+ *   turn_on_sticky_led
+ *
+ * Arguments
+ * - 'local_id': the layer id for which the corresponding LED should be turned on
+ *
+ * [description]
+ * Turn on the LED (1, 2 or 3) for one of the sticky layers given by local_id
+ * By default this will turn off the other 2 LEDs.
+ */
+ void turn_on_sticky_led (uint8_t local_id) {
+ 	if (local_id == 1 || local_id == 2 || local_id == 3) {
+ 		(DDRB &= ~(7<<5)); /* Turn off the 3 LEDs first. */
+ 		(DDRB |=  (1<<(4+local_id))); /* Turn the desired one on */
+ 	}
+ 	// switch (local_id) {
+ 	//     case 1:
+ 	//         (DDRB &= ~(1<<5));
+ 	//         break;
+ 	//     case 2:
+ 	//         (DDRB &= ~(1<<6));
+ 	//         break;
+		// case 3:
+ 	//         (DDRB &= ~(1<<7));
+ 	//         break;
+ 	//     default:
+ 	//         break;
+ 	// }
+ }
 /* ----------------------------------------------------------------------------
  * ------------------------------------------------------------------------- */
 

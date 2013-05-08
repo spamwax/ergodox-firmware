@@ -65,5 +65,9 @@
     void kbfun_layer_push_numpad             (void);
     void kbfun_layer_pop_numpad              (void);
 
+    // LEDs for sticky layers
+    void turn_on_sticky_led  (uint8_t);
+    void turn_off_sticky_led (uint8_t);
+
 #endif
 
