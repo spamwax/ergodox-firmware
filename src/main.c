@@ -90,7 +90,7 @@ int main(void) {
 		#define is_pressed   main_arg_is_pressed
 		#define was_pressed  main_arg_was_pressed
 		for (row=0; row<KB_ROWS; row++) {
-			// if (layers_head != 0)
+			// if (layers_head == 5)
 			// 	_kb_led_6_on(); // layer LED on
 			// else
 			// 	_kb_led_6_off(); // layer LED off

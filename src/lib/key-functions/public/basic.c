@@ -365,6 +365,7 @@ void kbfun_layer_pop_4(void) {
  *   the top of the stack, and record the id of that layer element
  */
 void kbfun_layer_push_5(void) {
+	_kb_led_6_on();
 	layer_push(5);
 }
 
@@ -389,6 +390,7 @@ void kbfun_layer_sticky_5  (void) {
  *   touching any other elements)
  */
 void kbfun_layer_pop_5(void) {
+	_kb_led_6_off();
 	layer_pop(5);
 }
 
