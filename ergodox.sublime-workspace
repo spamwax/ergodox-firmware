@@ -83,7 +83,7 @@
 			"file": "src/keyboard/ergodox/layout/workman-sw-sticky.c",
 			"settings":
 			{
-				"buffer_size": 20779,
+				"buffer_size": 23325,
 				"line_ending": "Unix"
 			}
 		},
@@ -585,7 +585,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1234,15 +1234,15 @@
 					"file": "src/keyboard/ergodox/layout/workman-sw-sticky.c",
 					"settings":
 					{
-						"buffer_size": 20779,
+						"buffer_size": 23325,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3602,
-								3602
+								17637,
+								17637
 							]
 						],
 						"settings":
@@ -1384,7 +1384,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 948.0,
+						"translation.y": 7084.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1544,7 +1544,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6384.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1727,8 +1727,8 @@
 						"selection":
 						[
 							[
-								13020,
-								13075
+								12979,
+								12979
 							]
 						],
 						"settings":
