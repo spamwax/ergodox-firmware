@@ -88,6 +88,7 @@ void kbfun_layer_pop_all(void) {
 #define  sguprre  &kbfun_gui_press_release
 #define  sctprre  &kbfun_ctrl_press_release
 #define  ssgprre  &kbfun_shift_gui_press_release
+#define  sagprre  &kbfun_alt_gui_press_release
 
 // ----------------------------------------------------------------------------
 
@@ -98,10 +99,10 @@ KB_MATRIX_LAYER(
 	// unused
 		0,
 	// left hand
-	_grave  , _stop  , _X , _C , _V  , _F , _backslash ,
-	_slash  , _Q     , _D , _R , _W  , _B , _tab       ,
+	_grave  , _stop  , _X , _C , _V  , _F , 5      ,
+	_slash  , _Q     , _D , _R , _W  , _B , _tab   ,
 	_shiftL , _A     , _S , _H , _T  , _G ,
-	_ctrlL  , _Z     , _X , _M , _C  , _V , _enter     ,
+	_ctrlL  , _Z     , _X , _M , _C  , _V , _enter ,
 	_pageU  , _pageD , 1  , 3  , _bs ,
 	_ctrlL      , _del   ,
 	0           , 0      , _altL ,
@@ -213,20 +214,20 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	0,	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,
+	0 , _F1 , _F2 , _F3 , _F4 , _F5 , _F11 ,
+	0 , 0   , 0   , 0   , 0   , 0   , 0    ,
+	0 , 0   , 0   , 0   , 0   , 0   ,
+	0 , 0   , 0   , 0   , 0   , 0   , 0    ,
+	0 , 0   , 0   , 0   , 0   ,
 	0,	0,
 	0,	0,	0,
 	0,	0,	0,
 	// right hand
-	0,	0,	0,	0,	0,	0,	5,
-	0,	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,
+	_F12 , _F6 , _F7 , _F8 , _F9 , _F10 , 5 ,
+	0    , 0   , 0   , 0   , 0   , 0    , 0 ,
+	0    , 0   , 0   , 0   , 0   , 0    ,
+	0    , 0   , 0   , 0   , 0   , 0    , 0 ,
+	0    , 0   , 0   , 0   , 0   ,
 	0,	0,
 	0,	0,	0,
 	0,	0,	0
@@ -273,11 +274,11 @@ KB_MATRIX_LAYER(
 	NULL,	NULL,	kprrel,
 	kprrel,	kprrel,	kprrel,
 	// right hand
-	kprrel   , kprrel   , sguprre , sguprre , ssgprre , sctprre , kprrel ,
-	kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel  , kprrel ,
-	kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel  ,
-	lpush2   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel  , kprrel ,
-	kprrel  ,lsticky1 , lsticky3 , kprrel  , kprrel  ,
+	kprrel , kprrel   , sguprre  , ssgprre , ssgprre , sctprre , kprrel ,
+	kprrel , kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel ,
+	kprrel , kprrel   , kprrel   , kprrel  , kprrel  , kprrel  ,
+	lpush2 , kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel ,
+	kprrel , lsticky1 , lsticky3 , kprrel  , kprrel  ,
 	sguprre , sguprre ,
 	kprrel  , NULL    , NULL   ,
 	kprrel  , kprrel  , kprrel
@@ -379,23 +380,23 @@ KB_MATRIX_LAYER(
 	// unused
 	NULL,
 	// left hand
-	dbtldr,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,
-	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,
+	dbtldr , kprrel , kprrel , kprrel , kprrel , kprrel , kprrel ,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,
+	ktrans,	NULL,	NULL,
+	ktrans,	ktrans,	ktrans,
 	// right hand
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	lpop5,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,
-	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	lpop5,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,
+	ktrans,	NULL,	NULL,
+	ktrans,	ktrans,	ktrans
 ),
 // LAYER 6
 KB_MATRIX_LAYER(
@@ -439,11 +440,11 @@ KB_MATRIX_LAYER(
 	NULL   , NULL   , kprrel ,
 	kprrel , kprrel , kprrel ,
 	// right hand
-	kprrel   , kprrel   , sguprre , sguprre , ssgprre , sctprre , kprrel ,
-	kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel  , kprrel ,
-	kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel  ,
-	NULL     , kprrel   , kprrel  , kprrel  , kprrel  , kprrel  , kprrel ,
-	kprrel  ,lsticky1 , lsticky3 , kprrel  , kprrel  ,
+	kprrel , kprrel   , sguprre  , ssgprre , ssgprre , sctprre , kprrel ,
+	kprrel , kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel ,
+	kprrel , kprrel   , kprrel   , kprrel  , kprrel  , kprrel  ,
+	NULL   , kprrel   , kprrel   , kprrel  , kprrel  , kprrel  , kprrel ,
+	kprrel , lsticky1 , lsticky3 , kprrel  , kprrel  ,
 	sguprre  , sguprre ,
 	kprrel  , NULL    , NULL   ,
 	kprrel  , kprrel  , kprrel
@@ -545,23 +546,23 @@ KB_MATRIX_LAYER(
 	// unused
 	NULL,
 	// left hand
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,
-	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,
+	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,
+	ktrans,	NULL,	NULL,
+	ktrans,	ktrans,	ktrans,
 	// right hand
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,
-	NULL,	NULL,
-	NULL,	NULL,	NULL,
-	NULL,	NULL,	NULL
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+	ktrans,	ktrans,
+	ktrans,	NULL,	NULL,
+	ktrans,	ktrans,	ktrans,
 ),
 // LAYER 6
 KB_MATRIX_LAYER(

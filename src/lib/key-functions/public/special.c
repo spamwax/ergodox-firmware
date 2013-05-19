@@ -84,6 +84,20 @@ void kbfun_shift_gui_press_release(void) {
 
 /*
  * [name]
+ *   Option/Alt + GUI + press|release
+ *
+ * [description]
+ *   Generate a 'alt+gui' press or release before the normal keypress or
+ *   keyrelease
+ */
+void kbfun_alt_gui_press_release(void) {
+	_kbfun_press_release(IS_PRESSED, KEY_LeftAlt);
+	_kbfun_press_release(IS_PRESSED, KEY_LeftGUI);
+	kbfun_press_release();
+}
+
+/*
+ * [name]
  *   Two keys => capslock
  *
  * [description]
