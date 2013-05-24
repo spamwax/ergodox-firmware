@@ -104,10 +104,10 @@
 			}
 		},
 		{
-			"file": "/Volumes/Home/hamid/Downloads/user_B4TGAU_20130518225229_ergodox_firmware/keyboard/ergodox/layout/default--layout.c",
+			"file": "/Volumes/Home/hamid/Downloads/user_B4TGAU_20130524011345_ergodox_firmware/keyboard/ergodox/layout/default--layout.c",
 			"settings":
 			{
-				"buffer_size": 22992,
+				"buffer_size": 23152,
 				"line_ending": "Unix"
 			}
 		}
@@ -348,6 +348,7 @@
 	},
 	"file_history":
 	[
+		"/Volumes/Home/hamid/Downloads/user_B4TGAU_20130518225229_ergodox_firmware/keyboard/ergodox/layout/default--layout.c",
 		"/Volumes/Home/hamid/Downloads/src/ergodox-firmware/src/lib/usb/usage-page/keyboard.h",
 		"/Volumes/Home/hamid/Library/Application Support/Sublime Text 2/Packages/User/Edit History.sublime-settings",
 		"/Volumes/Home/hamid/Library/Application Support/Sublime Text 2/Packages/EasyMotion/Default (OSX).sublime-keymap",
@@ -474,8 +475,7 @@
 		"/Volumes/Home/hamid-1/Library/Application Support/Sublime Text 2/Packages/Abacus/README.md",
 		"/Volumes/Home/hamid-1/Library/Application Support/Sublime Text 2/Packages/PyV8/osx/config.json",
 		"/Volumes/Home/hamid-1/Library/Application Support/Sublime Text 2/Packages/DetectSyntax/readme.md",
-		"/Volumes/Home/hamid-1/Library/Application Support/Sublime Text 2/Packages/Default File Type/README.md",
-		"/Volumes/Home/hamid-1/Library/Application Support/Sublime Text 2/Packages/User/Word Highlight.sublime-settings"
+		"/Volumes/Home/hamid-1/Library/Application Support/Sublime Text 2/Packages/Default File Type/README.md"
 	],
 	"find":
 	{
@@ -1241,8 +1241,8 @@
 						"selection":
 						[
 							[
-								17637,
-								17637
+								12444,
+								12444
 							]
 						],
 						"settings":
@@ -1384,7 +1384,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7084.0,
+						"translation.y": 1629.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1717,18 +1717,18 @@
 			[
 				{
 					"buffer": 7,
-					"file": "/Volumes/Home/hamid/Downloads/user_B4TGAU_20130518225229_ergodox_firmware/keyboard/ergodox/layout/default--layout.c",
+					"file": "/Volumes/Home/hamid/Downloads/user_B4TGAU_20130524011345_ergodox_firmware/keyboard/ergodox/layout/default--layout.c",
 					"settings":
 					{
-						"buffer_size": 22992,
+						"buffer_size": 23152,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12979,
-								12979
+								16478,
+								16478
 							]
 						],
 						"settings":
@@ -1870,7 +1870,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7031.0,
+						"translation.y": 9481.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1911,7 +1911,7 @@
 		"rows":
 		[
 			0.0,
-			0.520071355073,
+			0.530164089897,
 			1.0
 		]
 	},
@@ -2005,6 +2005,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 143.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true
 }
