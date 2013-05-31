@@ -206,10 +206,10 @@ void main_exec_key(void) {
 			turn_on_sticky_led(1);
 			// _kb_led_1_on();
 		else if (layers[layers_head].layer == 2)
-			turn_on_sticky_led(2);
+			turn_on_sticky_led(3);
 			// _kb_led_2_on();
 		else if (layers[layers_head].layer == 3)
-			turn_on_sticky_led(3);
+			turn_on_sticky_led(2);
 			// _kb_led_3_on();
 	}
 	else {
