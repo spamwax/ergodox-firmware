@@ -100,22 +100,22 @@ KB_MATRIX_LAYER(
 		0,
 	// left hand
 	_grave  , _stop  , _X , _C , _V  , _F , 5      ,
-	_slash  , _Q     , _D , _R , _W  , _B , _tab   ,
+	_tab    , _Q     , _D , _R , _W  , _B , _slash ,
 	_shiftL , _A     , _S , _H , _T  , _G ,
 	_ctrlL  , _Z     , _X , _M , _C  , _V , _enter ,
 	_pageU  , _pageD , 1  , 3  , _bs ,
-	_del  , 1      ,
+	_backslash  , _space      ,
 	0     , 0      , _altL ,
-	_guiL , _space , _esc  ,
+	_guiL , _esc  , _ctrlL ,
 	// right hand
-	_dash     , _mute , _Z , _space , _Z      , _C         , _equal    ,
-	_bracketL , _J    , _F , _U     , _P      , _semicolon , _bracketR ,
-	_Y        , _N    , _E , _O     , _I      , _shiftR    ,
-	2         , _K    , _L , _comma , _period , _quote     , _ctrlR    ,
+	_dash     , _mute , _Z , _space  , _Z      , _C         , _equal    ,
+	_bracketL , _J    , _F , _U      , _P      , _semicolon , _bracketR ,
+	_Y        , _N    , _E , _O      , _I      , _shiftR    ,
+	2         , _K    , _L , _comma  , _period , _quote     , _ctrlR    ,
 	_space    , 1     , 3  , _arrowL , _arrowR ,
    _home  , _end,
 	_altR,	0,	0,
-	_guiR ,	_bs,	_enter
+	_guiR ,	_del,	_enter
 ),
 // LAYER 1
 KB_MATRIX_LAYER(
@@ -286,7 +286,7 @@ KB_MATRIX_LAYER(
 	kprrel , kprrel , kprrel   , kprrel   , kprrel  , kprrel  ,
 	kprrel , kprrel , kprrel   , kprrel   , kprrel  , kprrel  , kprrel ,
 	kprrel , kprrel , lsticky1 , lsticky3 , kprrel  ,
-	kprrel , lpush1 ,
+	kprrel , kprrel ,
 	NULL,	NULL,	kprrel,
 	kprrel,	kprrel,	kprrel,
 	// right hand
@@ -468,7 +468,7 @@ KB_MATRIX_LAYER(
 	kprrel , kprrel , kprrel   , kprrel   , kprrel  , kprrel  ,
 	kprrel , kprrel , kprrel   , kprrel   , kprrel  , kprrel  , kprrel ,
 	kprrel , kprrel , lsticky1 , lsticky3 , kprrel  ,
-	kprrel , NULL ,
+	kprrel , kprrel ,
 	NULL   , NULL   , kprrel ,
 	kprrel , kprrel , kprrel ,
 	// right hand
