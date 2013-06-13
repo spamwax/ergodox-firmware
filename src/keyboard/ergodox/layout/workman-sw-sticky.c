@@ -99,14 +99,14 @@ KB_MATRIX_LAYER(
 	// unused
 		0,
 	// left hand
-	_grave  , _stop  , _X , _C , _V  , _F , 5      ,
+	_grave  , _pageU , _X , _C , _V  , _F , 5      ,
 	_tab    , _Q     , _D , _R , _W  , _B , _slash ,
 	_shiftL , _A     , _S , _H , _T  , _G ,
 	_ctrlL  , _Z     , _X , _M , _C  , _V , _enter ,
-	_pageU  , _pageD , 1  , 3  , _bs ,
-	_backslash  , _space      ,
+	_altL   , _pageD , 1  , 3  , _bs ,
+	_backslash  , _del      ,
 	0     , 0      , _altL ,
-	_guiL , _esc  , _ctrlL ,
+	_guiL , _esc  , _space ,
 	// right hand
 	_dash     , _mute , _Z , _space  , _Z      , _C         , _equal    ,
 	_bracketL , _J    , _F , _U      , _P      , _semicolon , _bracketR ,
