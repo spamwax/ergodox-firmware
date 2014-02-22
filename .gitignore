@@ -1,3 +1,4 @@
 build
 .tags*
 ergodox.sublime-workspace
+.python-version
