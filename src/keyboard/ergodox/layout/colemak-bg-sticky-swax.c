@@ -285,7 +285,7 @@ KB_MATRIX_LAYER(
 	kprrel  , kprrel  , kprrel   , kprrel   , kprrel , kprrel , kprrel ,
 	kprrel  , kprrel  , kprrel   , kprrel   , kprrel , kprrel ,
 	kprrel  , kprrel  , kprrel   , kprrel   , kprrel , kprrel , kprrel ,
-	sshprre , kprrel  , lsticky1 , lsticky3 , kprrel ,
+	kprrel  , kprrel  , lsticky1 , lsticky3 , kprrel ,
 	kprrel  , kprrel  ,
 	NULL    , 	NULL   , 	kprrel  ,
 	kprrel  , 	kprrel , 	kprrel  ,
