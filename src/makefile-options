@@ -14,7 +14,7 @@ LAYOUT   := qwerty-kinesis-mod  # keyboard layout
 				# available
 
 LED_BRIGHTNESS := 1.0  # a multiplier, with 1 being the max
-DEBOUNCE_TIME := 8  # in ms; see keyswitch spec for necessary value; 5ms should
+DEBOUNCE_TIME := 4  # in ms; see keyswitch spec for necessary value; 5ms should
 		    #   be good for cherry mx switches
 
 

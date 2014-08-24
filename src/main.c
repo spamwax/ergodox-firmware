@@ -205,7 +205,7 @@ void main_exec_key(void) {
 		if (layers[layers_head].layer == 1)
 			turn_on_sticky_led(1);
 			// _kb_led_1_on();
-		else if (layers[layers_head].layer == 2)
+		else if (layers[layers_head].layer == 6)
 			turn_on_sticky_led(3);
 			// _kb_led_2_on();
 		else if (layers[layers_head].layer == 3)
