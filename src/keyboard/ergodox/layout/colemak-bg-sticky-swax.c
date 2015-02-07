@@ -100,9 +100,9 @@ KB_MATRIX_LAYER(
 		0,
 	// left hand
 	_grave  , _1     , _2 , _3 , _4  , _5 , 2      ,
-	_enter  , _Q     , _W , _F , _P  , _B , _slash ,
+	_tab  , _Q     , _W , _F , _P  , _B , _slash ,
 	_shiftL , _A     , _R , _S , _T  , _D ,
-	_ctrlL  , _Z     , _X , _C , _G  , _V , _tab   ,
+	_ctrlL  , _Z     , _X , _C , _G  , _V , _enter   ,
 	_pageU  , _pageD , 1  , 3  , _bs ,
 	_esc  , _capsLock    ,
 	0     , 0      , _del ,
