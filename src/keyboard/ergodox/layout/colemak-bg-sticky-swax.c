@@ -99,10 +99,10 @@ KB_MATRIX_LAYER(
 	// unused
 		0,
 	// left hand
-	_grave  , _1 , _2 , _3 , _4  , _5 , 2      ,
-	_tab    , _Q     , _W , _F , _P  , _B , _slash ,
+	_grave  , _1     , _2 , _3 , _4  , _5 , 2      ,
+	_enter  , _Q     , _W , _F , _P  , _B , _slash ,
 	_shiftL , _A     , _R , _S , _T  , _D ,
-	_ctrlL  , _Z     , _X , _C , _G  , _V , _enter ,
+	_ctrlL  , _Z     , _X , _C , _G  , _V , _tab   ,
 	_pageU  , _pageD , 1  , 3  , _bs ,
 	_esc  , _capsLock    ,
 	0     , 0      , _del ,
@@ -122,11 +122,11 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	0       , 0         , 0         , 0     , 0    , 0      , 0 ,
-	_insert , _bracketL , _bracketR , 0x2F  , 0x30 , _5     , 0 ,
-	0      , 0x34      , _slash    , _dash , _equal   , 0x33   ,
-	0    , 0         , 0         , 0     , _7    , _grave , 0 ,
-	0       , 0         , 0         , 0     , 0    ,
+	0       , 0         , 0         , 0     , 0      , 0      , 0 ,
+	_insert , _bracketL , _bracketR , 0x2F  , 0x30   , _5     , 0 ,
+	0       , 0x34      , _slash    , _dash , _equal , 0x33   ,
+	0       , 0         , 0         , 0     , _7     , _grave , 0 ,
+	0       , 0         , 0         , 0     , 0      ,
 	0,	0,
 	0,	0,	0,
 	0,	0,	0,
@@ -145,11 +145,11 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	0 , _1 , _2        , _3 , _4   , _5         , 2 ,
+	0 , _1 , _2        , _3     , _4   , _5         , 2 ,
 	0 , 0  , _A        , _print , _C   , _sub_kp    , 0 ,
-	0 , 1  , 2        , 3 , 4   , 5    ,
-	0 , _4 , _equal_kp , _X , 0x33 , _semicolon , 0 ,
-	0 , 0  , 0         , 0  , 0    ,
+	0 , 1  , 2         , 3      , 4    , 5          ,
+	0 , _4 , _equal_kp , _X     , 0x33 , _semicolon , 0 ,
+	0 , 0  , 0         , 0      , 0    ,
 	0 , 0  ,
 	0 , 0  , 0 ,
 	0 , 0  , 0 ,
