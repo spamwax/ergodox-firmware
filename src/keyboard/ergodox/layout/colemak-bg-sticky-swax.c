@@ -327,7 +327,7 @@ KB_MATRIX_LAYER(
     // unused
 	NULL,
 	// left hand
-	lpop   , kprrel  , kprrel  , kprrel  , kprrel  , kprrel , lpush2 ,
+	lpop   , kprrel  , kprrel  , kprrel  , kprrel  , kprrel , lpop2  ,
 	ktrans , ktrans  , sshprre , sshprre , sshprre , kprrel , ktrans ,
 	ktrans , lpush1  , 	lpush2 , lpush3  , lpush4  , lpush5 ,
 	ktrans , sshprre , kprrel  , kprrel  , sshprre , kprrel , ktrans ,
@@ -610,7 +610,7 @@ KB_MATRIX_LAYER(
 	NULL,	NULL,	ktrans,
 	ktrans,	ktrans,	ktrans,
 	// right hand
-    ktrans , ktrans , ktrans , ktrans , ktrans , ktrans , NULL   ,
+    NULL   , ktrans , ktrans , ktrans , ktrans , ktrans , NULL   ,
     ktrans , ktrans , ktrans , ktrans , ktrans , ktrans , ktrans ,
     kprrel , kprrel , kprrel , kprrel , kprrel , ktrans ,
     NULL   , ktrans , ktrans , ktrans , ktrans , ktrans , ktrans ,
